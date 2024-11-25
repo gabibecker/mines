@@ -1,6 +1,7 @@
 import React, { Component } from "react"; // Importando Component
 import params from "./src/params";
 import { SafeAreaView, StyleSheet, Text } from "react-native"; // Importando Text
+import Field from "./src/components/Field";
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends Component {
         <Text style={styles.instructions}>
           Tamanho da grade: {params.getRowsAmount()}x{params.getColumnsAmount()}
         </Text>
+        <Field/>
       </SafeAreaView>
     );
   }
