@@ -2,6 +2,7 @@ import React, { Component } from "react"; // Importando Component
 import params from "./src/params";
 import { SafeAreaView, StyleSheet, Text } from "react-native"; // Importando Text
 import Field from "./src/components/Field";
+import Flag from "./src/components/Flag";
 
 export default class App extends Component {
   render() {
@@ -22,6 +23,8 @@ export default class App extends Component {
         <Field mined />
         <Field mined opened />
         <Field mined opened exploded/>
+        <Field flagged />
+        <Field flagged opened/>
       </SafeAreaView>
     );
   }
