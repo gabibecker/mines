@@ -2,7 +2,6 @@ import React, { Component } from "react"; // Importando Component
 import params from "./src/params";
 import { SafeAreaView, StyleSheet, Text } from "react-native"; // Importando Text
 import Field from "./src/components/Field";
-import Flag from "./src/components/Flag";
 
 export default class App extends Component {
   render() {
