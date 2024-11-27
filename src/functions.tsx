@@ -77,7 +77,7 @@ const openField = (board, row, column) => {
                     openField(board, n.row, n.column)
                 })
         } else {
-            const neighbors = getNeighbors(boar, row, column)
+            const neighbors = getNeighbors(board, row, column)
             field.nearMines = neighbors.filter(n=> n.mined).length
         }
     }
@@ -92,4 +92,11 @@ const pendding = field => (field.mined && !field.flagged)
 const wonGame = board => fields(board).filter(pendding).length === 0
 const showMines = board => fields(board).filter(field => field.mined)
     .forEach(field => field.opened = true)
-export {createMinedBoard}
+
+export {createMinedBoard,
+    cloneBoard,
+    openField,
+    hadExplosion,
+    wonGame,
+    showMines,
+}
