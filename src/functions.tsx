@@ -97,6 +97,9 @@ const showMines = board => fields(board).filter(field => field.mined)
         const field = board[row][column]
         field.flagged = !field.flagged
     }
+
+    const flagsUsed = board => fields(board).filter(field => field.flagged).length
+
 export {createMinedBoard,
     cloneBoard,
     openField,
@@ -104,4 +107,5 @@ export {createMinedBoard,
     wonGame,
     showMines,
     invertFlag,
+    flagsUsed,
 }
